@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgressTest.Mobile.MainPage"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0">
+
+            
+            
+            <!-- Rounded profile picture with color border -->
+            <!-- Image Profile-->
+            <Frame Grid.Row="1" Margin="0,-90,0,0" BorderColor="orange" HorizontalOptions="Center" WidthRequest="110" HeightRequest="{OnPlatform iOS='110', Android='20'}" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
+                <Image Source="profile_picture.png" Aspect="AspectFill"/>
+            </Frame>
+
+
+
+            <!-- Expandable labels with tail truncation -->
+            <Label Grid.Row="2" Text="Vincent van Gogh" FontAttributes="Bold" TextColor="#ffffff" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
+
+            <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+                
+                <Label Text="Duch, 1853 - 1890" FontSize="15" TextColor="White"/>
+                
+            </Grid>
+
+            <Grid Grid.Row="4" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                <Label Text="Was a Dutch Post-IMpressionist pointer who is among the most famous and influential...Read More" FontSize="15" TextColor="#f3f3f3"/>
+
+               
+
+            </Grid>
+
+
+            <!-- Grid with equal width -->
+            <Grid Grid.Row="5" HorizontalOptions="Center" ColumnSpacing="40"  Margin="0,30,0,0">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Grid.Column="0">
+                    <Label Text="$7.5m" TextColor="White" HorizontalOptions="Center" />
+                    <Label Grid.Column="0" Text="Record" TextColor="White" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label Text="$3.5m" TextColor="White" HorizontalOptions="Center" />
+                    <Label Grid.Column="1" Text="Average" TextColor="White" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label Text="+598%" TextColor="White" HorizontalOptions="Center" />
+                    <Label Grid.Column="2" Text="General" TextColor="White"  />
+                </StackLayout>
+
+                <StackLayout Grid.Column="3">
+                    <Label Text="12" TextColor="White" HorizontalOptions="Center" />
+                    <Label Grid.Column="3" Text="Items" TextColor="White"/>
+                </StackLayout>
+                
+            </Grid>
+
+            <!-- CollectionView -->
+
+            <Grid Grid.Row="6" Margin="0,30,0,0">
+                <Label Text="Other Van Gogh Works" FontSize="15" TextColor="White"/>
+                
+                <CollectionView>
+                </CollectionView>
+
+            </Grid>
+
+
+            <Grid Grid.Row="7" ColumnSpacing="10" RowSpacing="10" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="starry.jpeg" 
+                           Aspect="AspectFit" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" 
+                            HeightRequest="300"/>
+                    <StackLayout>
+                        <Label Text="Starry Night" TextColor="White" HorizontalOptions="Center" />
+                        <Label Text="$1,920,000" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Image Source="almond.jpeg" 
+                           Aspect="AspectFit" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+
+                    <StackLayout>
+                        <Label Text="Almond" TextColor="White" HorizontalOptions="Center" />
+                        <Label Text="$950,000.00" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Image Source="cafe.jpeg" 
+                           Aspect="AspectFit" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" 
+                            HeightRequest="150"/>
+
+                    <StackLayout>
+                        <Label Text="Starry Night" TextColor="White" HorizontalOptions="Center" />
+                        <Label Text="$12.00" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Image Source="flower.jpeg" 
+                           Aspect="AspectFit" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+
+                    <StackLayout>
+                        <Label Text="Starry Night" TextColor="White" HorizontalOptions="Center" />
+                        <Label Text="$12.00" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
